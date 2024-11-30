@@ -279,8 +279,8 @@ footer {
 }
 /* Profile Picture Styling with Glow Effect */
 .profile-pic {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
