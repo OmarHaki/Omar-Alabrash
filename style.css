@@ -1,0 +1,643 @@
+/* General Styles */
+
+/* General Header Styling */
+.header {
+    display: flex;
+    flex-direction: column; /* Stack logo and social icons vertically */
+    align-items: center;
+    padding: 10px;
+    background-color: inherit; /* Keep existing background */
+}
+
+/* Logo Section Styling */
+.logo-section {
+    margin-bottom: 20px; /* Space between logo and social icons */
+}
+
+.logo-section img {
+    max-width: 150px; /* Adjust the logo size */
+    height: auto;
+}
+
+
+/* Logo Animation */
+@keyframes logoFadeIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.logo-img {
+    width: 150px; /* Adjust size as needed */
+    opacity: 0;
+    animation: logoFadeIn 0.5s ease forwards;
+    animation-delay: 0.5s; /* Delay for a smoother effect */
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+}
+
+/* Banner Section */
+.banner {
+    background: url('images/banner-bg.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    opacity: 0;
+    animation: fadeInBanner 1s ease-in-out forwards;
+}
+
+@keyframes fadeInBanner {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out 0.5s forwards;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out 1s forwards;
+}
+
+.add-contact {
+    color: white;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #820208;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out 1.5s forwards;
+}
+
+.add-contact:hover {
+    background-color: #f5000d;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Portfolio Section */
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 2s forwards;
+}
+
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container img {
+    width: 100%;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 2s forwards;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 2.5s forwards;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    width: 80%;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out 3s forwards;
+}
+
+.contact button {
+    color: white;
+    padding: 10px 20px;
+    background-color: #820208;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInText 1s ease-in-out 3.5s forwards;
+}
+
+.contact button:hover {
+    background-color: #f5000d;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    padding: 40px 20px 20px;
+    background-color: #333;
+}
+
+/* إعداد الأيقونات */
+.social-icons {
+    display: flex; /* لعرض الأيقونات بشكل أفقي */
+    justify-content: flex-start; /* محاذاة الأيقونات من اليسار */
+    flex-wrap: wrap; /* تمكين لف الأيقونات عندما تكون الشاشة ضيقة */
+    gap: 15px; /* المسافة بين الأيقونات */
+}
+
+/* إعداد الأيقونات لتأثير الأنيميشن وجعلها دائرية */
+.social-icons img {
+    width: 40px;  /* حجم الأيقونات الطبيعي */
+    height: 40px; /* حجم الأيقونات الطبيعي */
+    border-radius: 50%;  /* تحويل الأيقونات إلى شكل دائري */
+    opacity: 0;   /* إخفاء الأيقونات في البداية */
+    transform: translateY(-50px) scale(0.5); /* التحريك من الأعلى مع تصغير الأيقونة */
+    transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.6s ease; /* تبطيء التغيير للتأثير */
+    animation: fadeInUp 1s ease forwards; /* إضافة الأنيميشن */
+}
+
+/* أنيميشن الظهور من الأعلى للأسفل مع التكبير */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;   /* البداية مع شفافية 0 (مخفي) */
+        transform: translateY(-50px) scale(0.5); /* البداية من الأعلى بحجم صغير */
+    }
+    100% {
+        opacity: 1;   /* النهاية مع شفافية كاملة */
+        transform: translateY(0) scale(1); /* العودة للحجم الطبيعي مع الاستقرار في مكانها */
+    }
+}
+
+/* إضافة تأخير ديناميكي بين الأيقونات */
+.social-icons img:nth-child(1) {
+    animation-delay: 0s; /* أول أيقونة تظهر على الفور */
+}
+.social-icons img:nth-child(2) {
+    animation-delay: 0.2s; /* ثاني أيقونة تظهر بعد 0.2 ثانية */
+}
+.social-icons img:nth-child(3) {
+    animation-delay: 0.4s; /* ثالث أيقونة تظهر بعد 0.4 ثانية */
+}
+.social-icons img:nth-child(4) {
+    animation-delay: 0.6s; /* رابع أيقونة تظهر بعد 0.6 ثانية */
+}
+.social-icons img:nth-child(5) {
+    animation-delay: 0.8s; /* خامس أيقونة تظهر بعد 0.8 ثانية */
+}
+.social-icons img:nth-child(6) {
+    animation-delay: 1s; /* سادس أيقونة تظهر بعد 1 ثانية */
+}
+
+/* تأثير التوهج وتغيير اللون عند التمرير فوق الأيقونة */
+.social-icons img:hover {
+    transform: scale(1.4); /* تكبير الأيقونة عند التمرير */
+    box-shadow: 0 0 15px 6px rgba(255, 255, 255, 0.7); /* تأثير التوهج */
+    filter: brightness(1.5); /* زيادة السطوع عند التمرير لجعل الأيقونة تضيء */
+}
+/* Profile Picture Styling with Glow Effect */
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: scaleUp 1s ease-in-out 1s forwards;
+
+    /* White Border */
+    border: 3px solid red; /* إضافة الحد الأبيض حول الصورة */
+
+}
+
+
+/* Animation for scaling up */
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+a[href^="tel:"] {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 20px;
+    background-color: #121212;
+    color: white;
+
+}
+
+.stat {
+    text-align: center;
+}
+
+.number {
+    font-size: 3em;
+    font-weight: bold;
+    color: #820208;
+    transition: transform 1s ease-in-out;
+}
+
+.stat p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.stats .stat:hover .number {
+    transform: scale(1.2);
+}
+
+/* Image Hover Section */
+.image-hover-section {
+    display: flex;
+    flex-wrap: wrap; /* يسمح للصور بالانتقال إلى السطر التالي عند ضيق المساحة */
+    justify-content: center; /* توسيط الصور */
+    margin-top: 40px;
+}
+
+.image-item {
+    position: relative;
+    width: 18%; /* العرض الافتراضي */
+    max-width: 600px; /* أقصى عرض للصور */
+    min-width: 400px; /* أقل عرض للصور */
+    height: auto; /* تحديد الارتفاع للصور */
+    margin-bottom: 20px;
+}
+
+/* تحسين عرض الصور */
+.image-item img {
+    width: 100%; /* اجعل عرض الصور 100% من حجم العنصر الحاوي */
+    height: 100%; /* اجعل الارتفاع 100% */
+    object-fit: cover; /* الحفاظ على نسبة العرض إلى الارتفاع دون تشويه */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* النص الموجود على الصورة */
+.image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* عند التمرير فوق الصورة يظهر النص */
+.image-item:hover .image-text {
+    opacity: 1;
+}
+
+
+/* استجابة للتصاميم على الشاشات الصغيرة */
+@media (max-width: 1200px) {
+    .image-item {
+        width: 22%; /* تغيير العرض ليتناسب مع الشاشات الأكبر */
+    }
+}
+
+@media (max-width: 992px) {
+    .image-item {
+        width: 30%; /* تقليص العرض على الشاشات المتوسطة */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-item {
+        width: 45%; /* تقليص العرض على الشاشات الصغيرة */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-item {
+        width: 90%; /* جعل الصور تستعرض بشكل عمودي على الشاشات الصغيرة جدا */
+    }
+}
+
+
+/* QR Code Section */
+.qr-code-section {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.qr-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.qr-description {
+    color: white;
+    padding-left: 20px;
+    max-width: 500px;
+}
+
+.qr-description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.qr-description p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .image-hover-section {
+        flex-direction: column;
+    }
+
+    .image-hover-section .image-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image-hover-section .image-item img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .image-hover-section .image-text {
+        font-size: 4vw;
+    }
+}
+
+/* تنسيق قائمة الهامبرغر */
+.hamburger-menu {
+    display: none; /* إخفاء القائمة في البداية */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-icon span {
+    height: 5px;
+    background-color: #fff; /* تغيير لون الأشرطة إلى الأبيض */
+    border-radius: 5px;
+}
+
+/* القائمة المنسدلة */
+.dropdown-menu {
+    display: none; /* إخفاء القائمة في البداية */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333; /* تغيير خلفية القائمة إلى لون داكن */
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu a {
+    color: #fff; /* تغيير لون النص داخل القائمة إلى الأبيض */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* إظهار القائمة عندما يتم تفعيل الهامبرغر */
+.hamburger-menu.active .dropdown-menu {
+    display: block;
+}
+
+/* استجابة للتصميم على الأجهزة المحمولة */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+}
+.dropdown-menu a:hover {
+    color: #ff6347; /* تغيير لون النص إلى اللون البرتقالي عند المرور */
+}
+
+.hamburger-menu.active .dropdown-menu {
+    display: block;
+}
+/* تصميم القسم مع الخلفية المتدرجة الأحمر والأزرق */
+.mostaql-section {
+    background: black; /* تدرج من الأحمر إلى الأزرق */
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.mostaql-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.mostaql-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.mostaql-link {
+    color: #ffcc00; /* لون مميز للرابط */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mostaql-link:hover {
+    text-decoration: underline;
+}
+
+.mostaql-logo img {
+    max-width: 200px; /* عرض الشعار بحجم مناسب */
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.mostaql-logo img:hover {
+    transform: scale(1.1); /* تأثير تكبير الشعار عند المرور عليه */
+}
+
+/* إضافة بعض التنسيقات على الروابط في النص */
+.mostaql-content a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+/* General Header Styling */
+.header {
+    display: flex; /* وضع العناصر في سطر واحد */
+    justify-content: space-between; /* وضع الشعار على اليسار والأيقونات على اليمين */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+    padding: 10px 50px; /* إضافة بعض الفراغ حول العناصر */
+    background-color: inherit; /* الحفاظ على لون الخلفية */
+    position: relative; /* جعل القسم مرنًا وغير ثابت */
+    width: 100%; /* ضمان أن يأخذ القسم عرض الصفحة بالكامل */
+}
+
+/* Logo Section Styling */
+.logo-section img {
+    max-width: 120px; /* حجم الشعار */
+    height: auto;
+}
+
+/* Social Icons Section */
+.social-icons {
+    display: flex; /* وضع الأيقونات في سطر واحد */
+    gap: 15px; /* المسافة بين الأيقونات */
+}
+
+/* Icon Styling */
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* جعل الأيقونات دائرية */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير التكبير والتوهج */
+}
+
+/* Hover effect for icons */
+.social-icons img:hover {
+    transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* إضافة تأثير التوهج */
+    filter: brightness(1.5); /* زيادة السطوع */
+}
+
