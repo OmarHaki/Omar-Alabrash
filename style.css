@@ -358,7 +358,7 @@ a[href^="tel:"] {
 .image-item {
     position: relative;
     width: 18%; /* العرض الافتراضي */
-    max-width: 500px; /* أقصى عرض للصور */
+    max-width: 525px; /* أقصى عرض للصور */
     min-width: 300px; /* أقل عرض للصور */
     height: auto; /* تحديد الارتفاع للصور */
     margin-bottom: 20px;
