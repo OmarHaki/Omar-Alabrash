@@ -279,8 +279,8 @@ footer {
 }
 /* Profile Picture Styling with Glow Effect */
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
@@ -288,7 +288,7 @@ footer {
     animation: scaleUp 1s ease-in-out 1s forwards;
 
     /* White Border */
-    border: 3px solid red; /* إضافة الحد الأبيض حول الصورة */
+     /* border: 3px solid red; /* إضافة الحد الأبيض حول الصورة */
 
 }
 
@@ -358,8 +358,8 @@ a[href^="tel:"] {
 .image-item {
     position: relative;
     width: 18%; /* العرض الافتراضي */
-    max-width: 600px; /* أقصى عرض للصور */
-    min-width: 400px; /* أقل عرض للصور */
+    max-width: 500px; /* أقصى عرض للصور */
+    min-width: 300px; /* أقل عرض للصور */
     height: auto; /* تحديد الارتفاع للصور */
     margin-bottom: 20px;
 }
