@@ -33,8 +33,8 @@ function animateNumbers() {
     const clients = document.getElementById('clients');
 
     // Update these numbers with your actual values
-    let visitorCount = 1234;
-    let projectCount = 56;
+    let visitorCount = 1705;
+    let projectCount = 385;
     let clientCount = 789;
 
     // Function to animate numbers
