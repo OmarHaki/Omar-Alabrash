@@ -1,8 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
 FN:Omar Alabrash
-ORG:Graphic Designer
-TEL:+201011513480
+ORG:Senior Graphic Designer
+TEL;TYPE=CELL:+201011513480
+TEL;TYPE=WORK:+201201488547
+TEL;TYPE=HOME:+00000000000
 EMAIL:omaralabrash@live.com
-URL:https://yourwebsite.com
+URL:https://omarhaki.github.io/Omar-Alabrash/
+X-SOCIALPROFILE;TYPE=YouTube:http://www.youtube.com/@omaralabrash
 END:VCARD
